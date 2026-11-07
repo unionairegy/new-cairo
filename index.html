@@ -115,8 +115,8 @@
 
   <style>    
     :root {      
-      --primary: #c00;      
-      --primary-dark: #900;      
+      --primary: #10b981; /* لون أخضر متناسق مع هوية كريازي */
+      --primary-dark: #059669;      
       --secondary: #0f172a;      
       --accent: #f59e0b;      
       --success: #10b981;      
@@ -218,21 +218,23 @@
       flex-wrap: wrap;    }
     .hero-btn {      
       display: inline-block;      
-      background: var(--accent);      
-      color: #0f172a;      
+      background: var(--primary);      
+      color: #ffffff;      
       text-decoration: none;      
       padding: 0.9rem 2.2rem;      
       border-radius: 8px;      
       font-weight: 800;      
       font-size: 1.15rem;      
-      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);      
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);      
       transition: transform 0.2s;    }
     .hero-btn-secondary {      
       background: #ffffff;      
       color: var(--secondary);      
       box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);    }
     .hero-btn:hover {      
-      transform: translateY(-2px);    }
+      transform: translateY(-2px);      
+      background: var(--primary-dark);
+    }
 
     .container {      
       max-width: 1100px;      
@@ -358,7 +360,7 @@
       box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);    }
     .submit-btn {      
       grid-column: 1 / -1;      
-      background: linear-gradient(135deg, var(--accent) 0%, #ea580c 100%);      
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);      
       color: #ffffff;      
       border: none;      
       padding: 1.2rem 2rem;      
@@ -367,12 +369,12 @@
       font-weight: 800;      
       cursor: pointer;      
       transition: all 0.25s ease;      
-      box-shadow: 0 6px 20px rgba(234, 88, 12, 0.4);      
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);      
       margin-top: 0.5rem;    }
     .submit-btn:hover {      
-      background: linear-gradient(135deg, #f59e0b 0%, #c2410c 100%);      
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);      
       transform: translateY(-2px);      
-      box-shadow: 0 8px 25px rgba(234, 88, 12, 0.55);    }
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.55);    }
     .form-footer-note {      
       text-align: center;      
       font-size: 0.88rem;      
