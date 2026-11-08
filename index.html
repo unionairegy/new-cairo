@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Complete JSON-LD Local Business & Schema Graph (Strict CID Binding & Detailed AreaServed) -->
+  <!-- Complete JSON-LD Local Business & Schema Graph (Cleaned without fake social links) -->
   <script type="application/ld+json">  
   {    
     "@context": "https://schema.org",    
@@ -43,7 +43,8 @@
       {        
         "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],        
         "@id": "https://kiriazi-new-cairo.maintenance-eg.net/#business",        
-        "name": "مركز صيانة اجهزة كريازي",        "alternateName": [          
+        "name": "مركز صيانة اجهزة كريازي",        
+        "alternateName": [          
           "مركز صيانة كريازي القاهرة الجديدة",          
           "مركز صيانة كريازي التجمع",          
           "Kiriazi Maintenance Center Cairo & Tagamoa"        ],
@@ -77,12 +78,9 @@
           { "@type": "AdministrativeArea", "name": "التجمع الخامس" },          
           { "@type": "AdministrativeArea", "name": "الرحاب" },          
           { "@type": "AdministrativeArea", "name": "مدينتي" },          
-          { "@type": "AdministrativeArea", "name": "المستثمرين" },          
-          { "@type": "AdministrativeArea", "name": "النسيم" }        ],        
+          { "@type": "AdministrativeArea", "name": "المستثمرين" }        ],        
         "sameAs": [          
-          "https://maps.google.com/?cid=12741935686008637294",          
-          "https://www.facebook.com/kiriazicenter",          
-          "https://x.com/kiriazicenter"        ],        
+          "https://maps.google.com/?cid=12741935686008637294"        ],        
         "hasOfferCatalog": {          
           "@type": "OfferCatalog",          
           "name": "خدمات الدعم الفني المنزلي لأجهزة كريازي",          
@@ -91,17 +89,20 @@
               "@type": "Offer",              
               "itemOffered": {                
                 "@type": "Service",                
-                "name": "صيانة ثلاجات كريازي",                "description": "فحص دوائر التبريد، شحن فريون، معالجة انسداد النوفروست وإصلاح الكباس بالمنزل."              }            },            
+                "name": "صيانة ثلاجات كريازي",                
+                "description": "فحص دوائر التبريد، شحن فريون، معالجة انسداد النوفروست وإصلاح الكباس بالمنزل."              }            },            
             {              
               "@type": "Offer",              
               "itemOffered": {                
                 "@type": "Service",                
-                "name": "صيانة غسالات كريازي",                "description": "فحص وإصلاح مشاكل الموتور، كارتة التشغيل، تسريب المياه، وعدم العصر أو الطرد بقطع غيار أصلية."              }            },            
+                "name": "صيانة غسالات كريازي",                
+                "description": "فحص وإصلاح مشاكل الموتور، كارتة التشغيل، تسريب المياه، وعدم العصر أو الطرد بقطع غيار أصلية."              }            },            
             {              
               "@type": "Offer",              
               "itemOffered": {                
                 "@type": "Service",                
-                "name": "صيانة ديب فريزر كريازي",                "description": "فحص كفاءة التجميد، علاج تراكم الثلج، وضبط جوانات الأبواب بالمنزل."              }            }          ]        }      },      
+                "name": "صيانة ديب فريزر كريازي",                
+                "description": "فحص كفاءة التجميد، علاج تراكم الثلج، وضبط جوانات الأبواب بالمنزل."              }            }          ]        }      },      
       {        
         "@type": "FAQPage",        
         "@id": "https://kiriazi-new-cairo.maintenance-eg.net/#faq",
@@ -649,8 +650,7 @@
             <li><strong>فريق العمل:</strong> فنيين خبرة مجهزون بأحدث أجهزة الفحص المنزلي السريع</li>          </ul>
 
           <div class="citations">            
-            <a href="https://www.facebook.com/kiriazicenter" target="_blank" rel="noopener" class="citation-link">Facebook Page</a>            
-            <a href="https://x.com/kiriazicenter" target="_blank" rel="noopener" class="citation-link">Twitter / X</a>          </div>        </div>      </section>
+            <a href="https://maps.google.com/?cid=12741935686008637294" target="_blank" rel="noopener" class="citation-link">Google Maps</a>          </div>        </div>      </section>
 
       <!-- Google Maps Embed iFrame -->      <div class="map-frame-box">        
         <iframe            
