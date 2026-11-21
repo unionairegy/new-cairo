@@ -125,37 +125,7 @@
         "https://gravatar.com/kiriazifixeg",
         "https://www.behance.net/kiriazifix"
       ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "خدمات الدعم الفني المنزلي لأجهزة كريازي",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "صيانة ثلاجات كريازي",
-              "description": "فحص دوائر التبريد، شحن فريون، معالجة انسداد النوفروست وإصلاح الكباس بالمنزل."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "صيانة غسالات كريازي",
-              "description": "فحص وإصلاح مشاكل الموتور، كارتة التشغيل، تسريب المياه، وعدم العصر أو الطرد بقطع غيار مطابقة."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "صيانة ديب فريزر كريازي",
-              "description": "فحص كفاءة التجميد، علاج تراكم الثلج، وضبط جوانات الأبواب بالمنزل."
-            }
-          }
-        ]
-      },
-      "description": "مركز صيانة أجهزة كريازي في القاهرة الجديدة والتجمع. نقدم خدمات الإصلاح والصيانة المنزلية لكافة أعطال الثلاجات، الغسالات، والديب فريزر بقطع غيار مطابقة للمواصفات.",
+      "description": "مركز صيانة أجهزة كريازي في القاهرة الجديدة والتجمع. نقدم خدمات الإصلاح والصيانة المنزلية لكافة أعطال الثلاجات، الغسالات، الديب فريزر، البوتاجازات، والسخانات بقطع غيار مطابقة للمواصفات.",
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -213,7 +183,7 @@
           "name": "هل يتم إصلاح الجهاز في المنزل؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "تتم المعاينة في المنزل، ويحدد الفني إمكانية الإصلاح في مكان الجهاز أو الحاجة إلى نقله حسب نوع العطل، بعد الاتفاق مع العميل."
+            "text": "تتم المعاينة والفحص واستبدال قطع الغيار التالفة في المنزل قدر الإمكان دون الحاجة لنقل الجهاز، ويُتفق مع العميل على الإجراء المناسب بعد الفحص."
           }
         },
         {
@@ -253,7 +223,7 @@
           "name": "أين أجد موقع المركز واتجاهات الوصول؟",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "العنوان الموضح هو مول H2، عبدالرحمن بيصار، القاهرة الجديدة. استخدم رابط عرض النشاط على خرائط جوجل بجوار الخريطة لفتح ملف النشاط واختيار الاتجاهات. اتصل قبل التوجه لتأكيد إمكانية الاستقبال."
+            "text": "العنوان الموضح هو مول H2، عبدالرحمن بيصار، القاهرة الجديدة. يمكنك الاطلاع على موقع المركز مباشرة عبر الخريطة المدمجة في الصفحة، والاتصال على 01032865979 قبل التوجه."
           }
         }
       ]
@@ -299,11 +269,12 @@
       --text-main: #334155;    
       --border-color: #cbd5e1;   
     }
-- {
+    *, *::before, *::after {
       box-sizing: border-box;    
       margin: 0;    
       padding: 0;    
-      font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;    }
+      font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
     body {    
       background-color: var(--bg-light);    
       color: var(--text-main);    
@@ -631,6 +602,9 @@
       flex-grow: 1;    
       border: 0;    }
 
+    .faq-section {
+      margin-top: 3.5rem;
+    }
     .faq-item {    
       background: white;    
       border: 1px solid #e2e8f0;    
@@ -644,24 +618,6 @@
     .faq-item p {    
       color: #64748b;    
       font-size: 0.95rem;    }
-
-    .citations {    
-      margin-top: 1.5rem;    
-      display: flex;    
-      gap: 0.8rem;    
-      flex-wrap: wrap;    }
-    .citation-link {    
-      background: var(--bg-light);    
-      border: 1px solid #cbd5e1;    
-      padding: 0.45rem 1.1rem;    
-      border-radius: 6px;    
-      color: var(--primary-dark);    
-      text-decoration: none;    
-      font-size: 0.88rem;    
-      font-weight: 700;    
-      transition: background 0.2s;    }
-    .citation-link:hover {    
-      background: #e2e8f0;    }
 
     footer {    
       background: var(--secondary);    
@@ -697,34 +653,28 @@
     @media(max-width:600px) { header { flex-direction:column; gap:12px; padding:1rem; } .header-cta { justify-content:center; } .hero h1 { font-size:1.7rem; } .brand-title { text-align:center; } }
     @media(prefers-reduced-motion:reduce) { *, *::before, *::after { transition:none !important; scroll-behavior:auto !important; } }
 
-  
-.header-left { margin-inline-start:auto; display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
-.header-map { display:flex; flex-wrap:wrap; align-items:center; gap:12px; font-size:0.85rem; }
-.header-map a { color:#0f172a; text-decoration:none; font-weight:700; }
-.header-map .directions-link { color:#047857; text-decoration:underline; }
-.header-cta { gap:8px; }
-.whatsapp-btn { background:#166534; }
-.coverage-section { background:#fff; border:1px solid #e2e8f0; padding:1.5rem; border-radius:12px; margin:2rem 0; }
-.coverage-section h2 { color:#0f172a; margin-bottom:0.75rem; }
-.areas-list { display:flex; flex-wrap:wrap; gap:8px; list-style:none; margin:1rem 0; }
-.areas-list li { padding:6px 12px; border-radius:20px; background:#ecfdf5; color:#065f46; font-size:0.9rem; }
-.faq-item h3 { color:#0f172a; font-size:1.05rem; margin-bottom:0.4rem; }
-@media(max-width:600px) { .header-left { width:100%; margin:0; align-items:center; } .header-map { justify-content:center; } .header-cta .btn-header { font-size:0.85rem; padding:0.55rem 0.8rem; } #booking-section { scroll-margin-top:180px; } }
+    .header-left { margin-inline-start:auto; display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+    .header-cta { gap:8px; }
+    .whatsapp-btn { background:#166534; }
+    .coverage-section { background:#fff; border:1px solid #e2e8f0; padding:1.5rem; border-radius:12px; margin:2rem 0; }
+    .coverage-section h2 { color:#0f172a; margin-bottom:0.75rem; }
+    .areas-list { display:flex; flex-wrap:wrap; gap:8px; list-style:none; margin:1rem 0; }
+    .areas-list li { padding:6px 12px; border-radius:20px; background:#ecfdf5; color:#065f46; font-size:0.9rem; }
+    .faq-item h3 { color:#0f172a; font-size:1.05rem; margin-bottom:0.4rem; }
+    @media(max-width:600px) { .header-left { width:100%; margin:0; align-items:center; } .header-cta .btn-header { font-size:0.85rem; padding:0.55rem 0.8rem; } #booking-section { scroll-margin-top:180px; } }
 
-/* Visible service-area tags mirror LocalBusiness.areaServed. */
-.coverage-section { margin:2rem 0 0; padding:clamp(1.25rem,4vw,2.4rem); background:linear-gradient(135deg,#ffffff,#f0fdf7); border:1px solid #bbf7d0; border-radius:22px; box-shadow:0 8px 30px rgba(15,23,42,0.04); }
-.coverage-heading { display:flex; align-items:center; gap:14px; margin-bottom:12px; }
-.coverage-icon { display:grid; place-items:center; width:52px; height:52px; flex-shrink:0; border-radius:16px; background:#064e3b; color:#fff; font-size:2rem; }
-.coverage-eyebrow { display:block; color:#047857; font-size:.8rem; font-weight:700; }
-.coverage-heading h2 { margin:0; font-size:1.6rem; }
-.coverage-section > p { max-width:760px; color:#475569; font-size:.95rem; }
-.coverage-section .areas-list { display:flex; flex-wrap:wrap; gap:10px; margin:1.4rem 0; padding:0; list-style:none; }
-.coverage-section .areas-list li { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; background:#fff; border:1px solid #cbded5; border-radius:999px; color:#164e3c; font-size:.88rem; line-height:1.6; box-shadow:0 2px 4px rgba(15,23,42,.025); }
-.area-dot { width:6px; height:6px; border-radius:50%; background:#059669; flex-shrink:0; }
-.coverage-section .coverage-note { border-top:1px solid #d1e8dc; padding-top:14px; font-size:.84rem; }
-@media(max-width:480px) { .coverage-section .areas-list { gap:8px; } .coverage-section .areas-list li { font-size:.8rem; padding:7px 11px; } }
-
-</style>
+    .coverage-section { margin:2rem 0 0; padding:clamp(1.25rem,4vw,2.4rem); background:linear-gradient(135deg,#ffffff,#f0fdf7); border:1px solid #bbf7d0; border-radius:22px; box-shadow:0 8px 30px rgba(15,23,42,0.04); }
+    .coverage-heading { display:flex; align-items:center; gap:14px; margin-bottom:12px; }
+    .coverage-icon { display:grid; place-items:center; width:52px; height:52px; flex-shrink:0; border-radius:16px; background:#064e3b; color:#fff; font-size:2rem; }
+    .coverage-eyebrow { display:block; color:#047857; font-size:.8rem; font-weight:700; }
+    .coverage-heading h2 { margin:0; font-size:1.6rem; }
+    .coverage-section > p { max-width:760px; color:#475569; font-size:.95rem; }
+    .coverage-section .areas-list { display:flex; flex-wrap:wrap; gap:10px; margin:1.4rem 0; padding:0; list-style:none; }
+    .coverage-section .areas-list li { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; background:#fff; border:1px solid #cbded5; border-radius:999px; color:#164e3c; font-size:.88rem; line-height:1.6; box-shadow:0 2px 4px rgba(15,23,42,.025); }
+    .area-dot { width:6px; height:6px; border-radius:50%; background:#059669; flex-shrink:0; }
+    .coverage-section .coverage-note { border-top:1px solid #d1e8dc; padding-top:14px; font-size:.84rem; }
+    @media(max-width:480px) { .coverage-section .areas-list { gap:8px; } .coverage-section .areas-list li { font-size:.8rem; padding:7px 11px; } }
+  </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">انتقل إلى المحتوى</a>
@@ -843,7 +793,7 @@
           <h4>تحديد الموعد والمعاينة</h4>          <p>يتواصل معك الفني المختص لتأكيد وقت الزيارة المنزلية الأنسب لجدولك اليومي.</p>        </div>        
         <div class="step-box">          
           <div class="step-number">3</div>          
-          <h4>الإصلاح المنزلي</h4>          <p>يتم الفحص واستبدال قطع الغيار التالفة أمامك داخل المنزل دون الحاجة لنقل الجهاز.</p>        </div>        
+          <h4>الإصلاح المنزلي</h4>          <p>يتم الفحص واستبدال قطع الغيار التالفة أمامك داخل المنزل قدر الإمكان دون الحاجة لنقل الجهاز.</p>        </div>        
         <div class="step-box">          
           <div class="step-number">4</div>          
           <h4>شهادة الفحص والتسليم</h4>          <p>تحصل على فاتورة وتقرير فني مكتوب يضمن لك حق المتابعة والمراجعة الفنية الدورية.</p>        </div>      </div>    
@@ -898,12 +848,6 @@
       <p class="form-footer-note">نستخدم بياناتك للتواصل بشأن طلب الصيانة. تُرسل بيانات النموذج عبر FormSubmit إلى بريد المركز. <a href="#privacy" style="color:#7dd3fc">تفاصيل الخصوصية</a></p>    
     </section>
 
-
-<!-- FAQ -->
-<section aria-labelledby="faq-title"><div class="section-title"><h2 id="faq-title">الأسئلة الشائعة حول صيانة كريازي</h2><p>10 إجابات عن الحجز والأجهزة والتغطية والمواعيد وتكلفة الصيانة</p></div><div class="faq-item"><h3>كيف أحجز صيانة أجهزة كريازي؟</h3><p>اتصل على 01032865979 أو راسلنا على واتساب 01156174546 أو أرسل نموذج طلب الصيانة. نراجع بيانات الجهاز والعنوان ثم نؤكد الموعد معك.</p></div><div class="faq-item"><h3>ما الأجهزة التي تشملها خدمة الصيانة؟</h3><p>نستقبل طلبات صيانة ثلاجات وغسالات وديب فريزر وبوتاجازات وسخانات كريازي، ويُحدد نوع التدخل الفني بعد معرفة الموديل وفحص العطل.</p></div><div class="faq-item"><h3>ما أحياء التجمع الخامس التي تشملها التغطية؟</h3><p>تشمل التغطية الأحياء الأول والثاني والثالث والرابع والخامس، والنرجس واللوتس والأندلس والشويفات وجنوب الأكاديمية وغرب الجولف وغرب أرابيلا والدبلوماسيين والمستثمرين وإسكان الجامعة الأمريكية، إلى جانب المناطق الموضحة في قائمة التغطية. يُؤكد توافر الفني عند الحجز.</p></div><div class="faq-item"><h3>هل تتوافر الخدمة خارج التجمع الخامس؟</h3><p>نستقبل الطلبات أيضًا من التجمع الأول والتجمع الثالث والرحاب ومدينتي ومناطق القاهرة الجديدة المذكورة بالصفحة، مع تأكيد توافر الزيارة حسب العنوان.</p></div><div class="faq-item"><h3>هل يتم إصلاح الجهاز في المنزل؟</h3><p>تتم المعاينة في المنزل، ويحدد الفني إمكانية الإصلاح في مكان الجهاز أو الحاجة إلى نقله حسب نوع العطل، بعد الاتفاق مع العميل.</p></div><div class="faq-item"><h3>ما مواعيد استقبال طلبات الصيانة؟</h3><p>نستقبل طلبات الصيانة يوميًا من الساعة 9 صباحًا حتى الساعة 1 صباحًا. يُحدد موعد الزيارة بالتنسيق مع العميل وحسب توافر الفنيين.</p></div><div class="faq-item"><h3>هل يمكن طلب زيارة عاجلة في نفس اليوم؟</h3><p>يمكن طلب زيارة عاجلة عبر الاتصال أو واتساب. يتوقف تنفيذ الزيارة في نفس اليوم على موقعك وتوافر الفني وقطع الغيار، ويُؤكد الموعد قبل الزيارة.</p></div><div class="faq-item"><h3>كيف أعرف تكلفة المعاينة والإصلاح؟</h3><p>استفسر عن رسوم المعاينة عند الحجز. تتحدد تكلفة الإصلاح والقطع المطلوبة بعد فحص الجهاز، ويُتفق عليها قبل بدء الأعمال.</p></div><div class="faq-item"><h3>ما البيانات المطلوبة عند طلب الصيانة؟</h3><p>اذكر الاسم ورقم التواصل والعنوان بالتفصيل ونوع الجهاز والموديل إن أمكن ووصف العطل. يمكنك إرسال صورة لملصق الموديل أو رسالة الخطأ عبر واتساب دون مشاركة معلومات حساسة.</p></div><div class="faq-item"><h3>أين أجد موقع المركز واتجاهات الوصول؟</h3><p>العنوان الموضح هو مول H2، عبدالرحمن بيصار، القاهرة الجديدة. استخدم رابط عرض النشاط على خرائط جوجل بجوار الخريطة لفتح ملف النشاط واختيار الاتجاهات. اتصل قبل التوجه لتأكيد إمكانية الاستقبال.</p></div></section>
-
-
-<section id="privacy" class="faq-item" style="margin-top:2rem"><h2>خصوصية طلبات الصيانة</h2><p>يطلب النموذج الاسم والهاتف والعنوان ووصف العطل للتواصل وترتيب الزيارة. تُرسل هذه البيانات عبر خدمة FormSubmit إلى بريد المركز. لا ترسل بيانات دفع أو كلمات مرور. للاستفسار عن بيانات طلبك أو طلب حذفها تواصل على <a href="tel:+201032865979">01032865979</a>.</p></section>
     <!-- Location, Embed Map & Authority NAP Block -->  
     <div class="section-title">      
       <h2>تغطية الخدمة والنطاق الجغرافي</h2>      
@@ -918,13 +862,13 @@
             <li><strong>نطاق الخدمة:</strong> تغطية شاملة لكافة أحياء ومناطق القاهرة الجديدة و<strong>التجمع</strong> (التجمع الأول، التجمع الثالث، التجمع الخامس، الرحاب، مدينتي)</li>            
             <li><strong>العنوان:</strong> مول H2، عبدالرحمن بيصار، القاهرة الجديدة</li>
             <li><strong>رقم الهاتف المباشر:</strong> <a href="tel:+201032865979" style="color: var(--primary); text-decoration: none; font-weight: bold;">01032865979</a></li>            
-            <li><strong>واتساب:</strong> <a href="https://wa.me/201156174546" target="_blank" rel="noopener" dir="ltr">+20 11 56174546</a></li><li><strong>ساعات العمل والاستقبال:</strong> 7 أيام في الأسبوع من 9:00 صباحاً حتى 1:00 صباحاً</li>            
+            <li><strong>واتساب:</strong> <a href="https://wa.me/201156174546" target="_blank" rel="noopener" dir="ltr">+20 11 56174546</a></li>
+            <li><strong>ساعات العمل والاستقبال:</strong> 7 أيام في الأسبوع من 9:00 صباحاً حتى 1:00 صباحاً</li>            
             <li><strong>فريق العمل:</strong> فنيين خبرة مجهزون بأحدث أجهزة الفحص المنزلي</li>          </ul>
-
-          <!-- تم إخفاء الزر النصي لخرائط جوجل هنا للحفاظ على سرية الـ CID ومنع نسخه -->
         </div>      </section>
 
-      <!-- Google Maps Embed iFrame -->      <div class="map-frame-box">        
+      <!-- Google Maps Embed iFrame -->
+      <div class="map-frame-box">        
         <iframe            
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.789265022522!2d31.4468695!3d30.0607312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14582374e228892f%3A0xb10dbda0a6f8276e!2z2YXYsdmD2LIg2LXZitin2YbYqSDYp9is2YfYstipINmD2LHZitin2LLZiQ!5e1!3m2!1sen!2seg!4v1794350123668!5m2!1sen!2seg"            
           width="100%"            
@@ -936,14 +880,30 @@
           title="خريطة صيانة كريازي القاهرة الجديدة والتجمع">          </iframe>      </div>
     </div>
 
-  
-<section class="coverage-section" id="service-areas" aria-labelledby="coverage-title">
-<div class="coverage-heading"><span class="coverage-icon" aria-hidden="true">⌖</span><div><span class="coverage-eyebrow">قريبين منك</span><h2 id="coverage-title">مناطق الخدمة</h2></div></div>
-<p>خدمة صيانة أجهزة كريازي في أحياء التجمع ومناطق القاهرة الجديدة التالية. حدّد منطقتك عند الحجز لتأكيد توافر الزيارة.</p>
-<ul class="areas-list" aria-label="أحياء ومناطق تقديم خدمة الصيانة"><li><span class="area-dot" aria-hidden="true"></span>القاهرة الجديدة</li><li><span class="area-dot" aria-hidden="true"></span>التجمع الخامس</li><li><span class="area-dot" aria-hidden="true"></span>التجمع الأول</li><li><span class="area-dot" aria-hidden="true"></span>التجمع الثالث</li><li><span class="area-dot" aria-hidden="true"></span>الرحاب</li><li><span class="area-dot" aria-hidden="true"></span>مدينتي</li><li><span class="area-dot" aria-hidden="true"></span>الحي الأول</li><li><span class="area-dot" aria-hidden="true"></span>الحي الثاني</li><li><span class="area-dot" aria-hidden="true"></span>الحي الثالث</li><li><span class="area-dot" aria-hidden="true"></span>الحي الرابع</li><li><span class="area-dot" aria-hidden="true"></span>الحي الخامس</li><li><span class="area-dot" aria-hidden="true"></span>النرجس عمارات</li><li><span class="area-dot" aria-hidden="true"></span>النرجس فيلات</li><li><span class="area-dot" aria-hidden="true"></span>النرجس الجديدة</li><li><span class="area-dot" aria-hidden="true"></span>اللوتس الشمالية</li><li><span class="area-dot" aria-hidden="true"></span>اللوتس الجنوبية</li><li><span class="area-dot" aria-hidden="true"></span>الأندلس</li><li><span class="area-dot" aria-hidden="true"></span>الشويفات</li><li><span class="area-dot" aria-hidden="true"></span>غرب الجولف</li><li><span class="area-dot" aria-hidden="true"></span>جنوب الأكاديمية</li><li><span class="area-dot" aria-hidden="true"></span>شرق الأكاديمية</li><li><span class="area-dot" aria-hidden="true"></span>غرب أرابيلا</li><li><span class="area-dot" aria-hidden="true"></span>أرابيلا</li><li><span class="area-dot" aria-hidden="true"></span>صالات الدبلوماسيين</li><li><span class="area-dot" aria-hidden="true"></span>المستثمرين الشمالية</li><li><span class="area-dot" aria-hidden="true"></span>المستثمرين الجنوبية</li><li><span class="area-dot" aria-hidden="true"></span>إسكان الجامعة الأمريكية</li><li><span class="area-dot" aria-hidden="true"></span>بيت الوطن</li><li><span class="area-dot" aria-hidden="true"></span>الياسمين</li><li><span class="area-dot" aria-hidden="true"></span>البنفسج</li><li><span class="area-dot" aria-hidden="true"></span>القرنفل</li><li><span class="area-dot" aria-hidden="true"></span>جاردينيا هايتس</li></ul>
-<p class="coverage-note">اذكر الحي والشارع وأقرب علامة مميزة عند التواصل لتنسيق الزيارة.</p>
-</section>
-</main>
+    <section class="coverage-section" id="service-areas" aria-labelledby="coverage-title">
+      <div class="coverage-heading"><span class="coverage-icon" aria-hidden="true">⌖</span><div><span class="coverage-eyebrow">قريبين منك</span><h2 id="coverage-title">مناطق الخدمة</h2></div></div>
+      <p>خدمة صيانة أجهزة كريازي في أحياء التجمع ومناطق القاهرة الجديدة التالية. حدّد منطقتك عند الحجز لتأكيد توافر الزيارة.</p>
+      <ul class="areas-list" aria-label="أحياء ومناطق تقديم خدمة الصيانة"><li><span class="area-dot" aria-hidden="true"></span>القاهرة الجديدة</li><li><span class="area-dot" aria-hidden="true"></span>التجمع الخامس</li><li><span class="area-dot" aria-hidden="true"></span>التجمع الأول</li><li><span class="area-dot" aria-hidden="true"></span>التجمع الثالث</li><li><span class="area-dot" aria-hidden="true"></span>الرحاب</li><li><span class="area-dot" aria-hidden="true"></span>مدينتي</li><li><span class="area-dot" aria-hidden="true"></span>الحي الأول</li><li><span class="area-dot" aria-hidden="true"></span>الحي الثاني</li><li><span class="area-dot" aria-hidden="true"></span>الحي الثالث</li><li><span class="area-dot" aria-hidden="true"></span>الحي الرابع</li><li><span class="area-dot" aria-hidden="true"></span>الحي الخامس</li><li><span class="area-dot" aria-hidden="true"></span>النرجس عمارات</li><li><span class="area-dot" aria-hidden="true"></span>النرجس فيلات</li><li><span class="area-dot" aria-hidden="true"></span>النرجس الجديدة</li><li><span class="area-dot" aria-hidden="true"></span>اللوتس الشمالية</li><li><span class="area-dot" aria-hidden="true"></span>اللوتس الجنوبية</li><li><span class="area-dot" aria-hidden="true"></span>الأندلس</li><li><span class="area-dot" aria-hidden="true"></span>الشويفات</li><li><span class="area-dot" aria-hidden="true"></span>غرب الجولف</li><li><span class="area-dot" aria-hidden="true"></span>جنوب الأكاديمية</li><li><span class="area-dot" aria-hidden="true"></span>شرق الأكاديمية</li><li><span class="area-dot" aria-hidden="true"></span>غرب أرابيلا</li><li><span class="area-dot" aria-hidden="true"></span>أرابيلا</li><li><span class="area-dot" aria-hidden="true"></span>صالات الدبلوماسيين</li><li><span class="area-dot" aria-hidden="true"></span>المستثمرين الشمالية</li><li><span class="area-dot" aria-hidden="true"></span>المستثمرين الجنوبية</li><li><span class="area-dot" aria-hidden="true"></span>إسكان الجامعة الأمريكية</li><li><span class="area-dot" aria-hidden="true"></span>بيت الوطن</li><li><span class="area-dot" aria-hidden="true"></span>الياسمين</li><li><span class="area-dot" aria-hidden="true"></span>البنفسج</li><li><span class="area-dot" aria-hidden="true"></span>القرنفل</li><li><span class="area-dot" aria-hidden="true"></span>جاردينيا هايتس</li></ul>
+      <p class="coverage-note">اذكر الحي والشارع وأقرب علامة مميزة عند التواصل لتنسيق الزيارة.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="section-title"><h2 id="faq-title">الأسئلة الشائعة حول صيانة كريازي</h2><p>10 إجابات عن الحجز والأجهزة والتغطية والمواعيد وتكلفة الصيانة</p></div>
+      <div class="faq-item"><h3>كيف أحجز صيانة أجهزة كريازي؟</h3><p>اتصل على 01032865979 أو راسلنا على واتساب 01156174546 أو أرسل نموذج طلب الصيانة. نراجع بيانات الجهاز والعنوان ثم نؤكد الموعد معك.</p></div>
+      <div class="faq-item"><h3>ما الأجهزة التي تشملها خدمة الصيانة؟</h3><p>نستقبل طلبات صيانة ثلاجات وغسالات وديب فريزر وبوتاجازات وسخانات كريازي، ويُحدد نوع التدخل الفني بعد معرفة الموديل وفحص العطل.</p></div>
+      <div class="faq-item"><h3>ما أحياء التجمع الخامس التي تشملها التغطية؟</h3><p>تشمل التغطية الأحياء الأول والثاني والثالث والرابع والخامس، والنرجس واللوتس والأندلس والشويفات وجنوب الأكاديمية وغرب الجولف وغرب أرابيلا والدبلوماسيين والمستثمرين وإسكان الجامعة الأمريكية، إلى جانب المناطق الموضحة في قائمة التغطية. يُؤكد توافر الفني عند الحجز.</p></div>
+      <div class="faq-item"><h3>هل تتوافر الخدمة خارج التجمع الخامس؟</h3><p>نستقبل الطلبات أيضًا من التجمع الأول والتجمع الثالث والرحاب ومدينتي ومناطق القاهرة الجديدة المذكورة بالصفحة، مع تأكيد توافر الزيارة حسب العنوان.</p></div>
+      <div class="faq-item"><h3>هل يتم إصلاح الجهاز في المنزل؟</h3><p>تتم المعاينة والفحص واستبدال قطع الغيار التالفة في المنزل قدر الإمكان دون الحاجة لنقل الجهاز، ويُتفق مع العميل على الإجراء المناسب بعد الفحص.</p></div>
+      <div class="faq-item"><h3>ما مواعيد استقبال طلبات الصيانة؟</h3><p>نستقبل طلبات الصيانة يوميًا من الساعة 9 صباحًا حتى الساعة 1 صباحًا. يُحدد موعد الزيارة بالتنسيق مع العميل وحسب توافر الفنيين.</p></div>
+      <div class="faq-item"><h3>هل يمكن طلب زيارة عاجلة في نفس اليوم؟</h3><p>يمكن طلب زيارة عاجلة عبر الاتصال أو واتساب. يتوقف تنفيذ الزيارة في نفس اليوم على موقعك وتوافر الفني وقطع الغيار، ويُؤكد الموعد قبل الزيارة.</p></div>
+      <div class="faq-item"><h3>كيف أعرف تكلفة المعاينة والإصلاح؟</h3><p>استفسر عن رسوم المعاينة عند الحجز. تتحدد تكلفة الإصلاح والقطع المطلوبة بعد فحص الجهاز، ويُتفق عليها قبل بدء الأعمال.</p></div>
+      <div class="faq-item"><h3>ما البيانات المطلوبة عند طلب الصيانة؟</h3><p>اذكر الاسم ورقم التواصل والعنوان بالتفصيل ونوع الجهاز والموديل إن أمكن ووصف العطل. يمكنك إرسال صورة لملصق الموديل أو رسالة الخطأ عبر واتساب دون مشاركة معلومات حساسة.</p></div>
+      <div class="faq-item"><h3>أين أجد موقع المركز واتجاهات الوصول؟</h3><p>العنوان الموضح هو مول H2، عبدالرحمن بيصار، القاهرة الجديدة. يمكنك الاطلاع على موقع المركز مباشرة عبر الخريطة المدمجة في الصفحة، والاتصال على 01032865979 قبل التوجه.</p></div>
+    </section>
+
+    <section id="privacy" class="faq-item" style="margin-top:2rem"><h2>خصوصية طلبات الصيانة</h2><p>يطلب النموذج الاسم والهاتف والعنوان ووصف العطل للتواصل وترتيب الزيارة. تُرسل هذه البيانات عبر خدمة FormSubmit إلى بريد المركز. لا ترسل بيانات دفع أو كلمات مرور. للاستفسار عن بيانات طلبك أو طلب حذفها تواصل على <a href="tel:+201032865979">01032865979</a>.</p></section>
+  </main>
 
   <!-- Footer مع الروابط الجديدة المطلوبة -->
   <footer>    
@@ -967,8 +927,7 @@
     </div>
 
     <div class="disclaimer-box"><strong>إخلاء مسؤولية:</strong> المركز غير تابع للشركة المصنعة. العلامات التجارية ملك لأصحابها.</div>  
-</footer>
-
+  </footer>
 
 </body>
 </html>
